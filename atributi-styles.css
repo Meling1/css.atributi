@@ -1,0 +1,38 @@
+[title]{
+    text-decoration: underline solid red;
+}
+
+h1[title*="odlomak"]{
+    color: darkgreen;
+}
+
+[title="prvi odlomak"]{
+    background-color: yellow;
+}
+
+/*svi koji sadrže tu vrijednost u atributu*/
+[title~="odlomak"]{
+    text-transform: uppercase;
+}
+
+/*počinje s tom vrijednoscu*/
+[title^="odlomak"]{
+    font-style: italic;
+}
+
+/*jednak vrijednosti ili pocinje s "vrije"
+ovdje ce promijeniti style tek ako je cijela rijec do separataora -> crtice,
+nece raditi ako napisemo npr "odlo", ali raditi ce "odlomak", a full naziv vrijednosti je: odlomak-1*/
+[title|="odlomak"]{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*bilo koji element koji sadrzava atribut title cija vrijednost zavrsava s vrijednosti "odlomak"*/ 
+[title$="odlomak"]{
+    color: blue;
+}
+
+/*svi elementi koji sadrzavaju atribut title (bilo gdje)*/
+[title*="odlomak"]{
+    color: green;
+}
